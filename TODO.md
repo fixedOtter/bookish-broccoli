@@ -25,8 +25,14 @@ trying to break this down quite a bit so i can follow this list when i'm back in
 ### server writing
 - [ ] write server.js (look to past projects for assist)
 - [ ] 
-- [ ]
-- [ ]
+
+### frontend writing
+- [x] start index.html
+- [x] connect stylesheets to html
+- [x] connect js to html
+- [ ] create main screen
+- [ ] create login screen
+- [ ] create making post screen
 - [ ]
 
 
