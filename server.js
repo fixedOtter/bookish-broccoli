@@ -31,7 +31,7 @@ app.use(Express.urlencoded({ extended: true }));
 // allow us to pass json data to backend 
 app.use(Express.json());
 // linking routes to root
-app.use('/api', crud_routes);
+app.use('/', crud_routes);
 
 
 /* 

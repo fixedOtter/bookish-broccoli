@@ -1,0 +1,26 @@
+{
+  "name": "bookish-broccoli",
+  "version": "1.0.0",
+  "description": "a bustling bazaar of brilliant banter and breathtakingly beautiful blogs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fixedOtter/bookish-broccoli.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "fixedOtter",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/fixedOtter/bookish-broccoli/issues"
+  },
+  "homepage": "https://github.com/fixedOtter/bookish-broccoli#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

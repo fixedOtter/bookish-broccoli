@@ -5,11 +5,13 @@ trying to break this down quite a bit so i can follow this list when i'm back in
 ### server init
 - [x] touch .gitignore
 - [x] touch server.js
-- [ ] create routes dir
-- [ ] touch routes js
-- [ ] configure node and install dependancies
+- [x] run `npm init` to initialize as project and create package.json file
+- [x] create routes dir
+- [x] touch routes js
+- [ ] do all crud routes
+- [x] configure node and install dependancies (express...?)
 - [ ] config nodemon (ignore public folder && database folder) 
-- [ ] touch dummy database
+- [x] touch dummy database (+ little seeding)
 
 ### public folder
 - [X] create public folder
