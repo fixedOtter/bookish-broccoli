@@ -23,17 +23,6 @@ const getPostData = () => {
 }
 
 /* actually the routes */
-// this should return all the current posts
-crud_router.get('/posts', (req, res) => {
-  getPostData()
-  .then(postData => {
-    res.json(postData);
-  })
-  .catch(err => {
-    console.error(err);
-  });
-});
-
 // this should make a post
 crud_router.post('/post', (req, res) => {
   getPostData()
@@ -58,6 +47,22 @@ crud_router.post('/post', (req, res) => {
         res.json(userInput)
       });
   });
+});
+
+// this should return all the current posts
+crud_router.get('/posts', (req, res) => {
+  getPostData()
+  .then(postData => {
+    res.json(postData);
+  })
+  .catch(err => {
+    console.error(err);
+  });
+});
+
+// this should get a single
+crud_router.get('/post/:id', (req, res) => {
+  console.log(req.params.id);
 });
 
 module.exports = crud_router;
