@@ -9,8 +9,8 @@ const crud_router = require('express').Router();
 const path = require('path');
 // for filesystem manips
 const fs = require('fs');
-// what are this for?
-// const {v4 : uuid} = require('uuid');
+// for making ez uuids
+const {v4 : uuid} = require('uuid');
 
 /* declarations */
 // setting the fake database path (will be changed)
@@ -23,7 +23,7 @@ const getPostData = () => {
 }
 
 /* actually the routes */
-//this should return all the current posts
+// this should return all the current posts
 crud_router.get('/posts', (req, res) => {
   getPostData()
   .then(postData => {
@@ -31,6 +31,32 @@ crud_router.get('/posts', (req, res) => {
   })
   .catch(err => {
     console.error(err);
+  });
+});
+
+// this should make a post
+crud_router.post('/post', (req, res) => {
+  getPostData()
+  .then(postData => {
+    // get input from the request
+    const userInput = req.body;
+    console.log(userInput);
+
+    // make uuid
+    newPostID = uuid().slice(0,4);
+    // set user post with gen uuid
+    userInput.fuuid = newPostID;
+
+    // push user data to variable storing JSON data
+    postData.push(userInput);
+
+    // write the new input to the actual JSON database
+    fs.promises.writeFile(databasePath, JSON.stringify(postData, null, 2))
+      .then(() => {
+        // i'm then repling with json data, but this isn't actually what I want
+        // redirect them to main posts? redirect them to the new post?
+        res.json(userInput)
+      });
   });
 });
 

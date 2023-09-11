@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- picnic stylesheet -->
-  <link rel="stylesheet" href="css/picnic.min.css">
+  <link rel="stylesheet" href="../css/picnic.min.css">
   <!-- local stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 
   <title>bookish broccoli</title>
 </head>
@@ -15,15 +15,10 @@
   
   <nav class="nav">
     <!-- main logo -->
-    <a href="#" class="brand">
+    <a href="/" class="brand">
       <!-- insert logo image? -->
       <span>bookish broccoli</span>
     </a>
-    
-    <!-- center search bar? fix somehow? -->
-    <!-- <form action="/api/search" method="post">
-      <label><input type="search" name="search" placeholder="Search"></label>
-    </form> -->
 
     <!-- right side buttons -->
     <input id="bmenub" type="checkbox" class="show">
@@ -31,7 +26,7 @@
 
     <div class="menu">
       <a href="#" class="pseudo button">login</a>
-      <a href="pages/makepost.html" class="button">create</a>
+      <a href="#" class="button">create</a>
     </div>
   </nav>
 
@@ -40,7 +35,14 @@
     <!-- making the main holder of the blogposts -->
     <section id="mainSection" class="flex center one">
 
-
+      <section id="postMaker" class="flex center full half-1000">
+        <form id="postForm" action="/post" method="post" class="full flex one">
+          <input type="title" name="title" placeholder="Title">
+          <input type="feeling" name="feeling" placeholder="Feeling">
+          <textarea type="body" name="body" placeholder="Body"></textarea>
+          <input id="submitPost" value="Submit" type="submit">
+        </form>
+      </section>     
 
 
 
@@ -48,6 +50,6 @@
   </main>
 
   <!-- linking to script file -->
-  <script src="js/script.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 </html>

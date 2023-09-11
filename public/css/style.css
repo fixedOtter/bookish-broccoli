@@ -1,0 +1,20 @@
+/* made by fixedOtter on 11.9.2023 */
+
+
+
+.main #mainSection {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 80px 0 0;
+}
+
+#postForm > * {
+  margin: .42em 0 0;
+}
+
+
+@media screen and (min-width: 1500px) {
+  .main #mainSection {
+    max-width: 69%;
+  }
+}
